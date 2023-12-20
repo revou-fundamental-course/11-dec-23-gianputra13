@@ -3,40 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/revoU.ico" type="image/x-icon" />
     <title>My School</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <nav>
-      <img src="" alt="Logo" class="logo" />
+      <img src="assets/revoU.png" alt="Logo" class="logo" />
       <ul class="nav-items">
-        <li>Home</li>
-        <li>Our Profile</li>
-        <li>Achivement</li>
-        <li>Message Us</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#our-profile">Our Profile</a></li>
+        <li><a href="#achivement">Achivement</a></li>
+        <li><a href="#message-us">Message Us</a></li>
       </ul>
     </nav>
 
-    <header>
-      <h1>Hi Gian, welcome to our website</h1>
-      <h4>Please Enjoy</h4>
-      <img src="" alt="" />
-      <hr />
-    </header>
+    <div id="home">
+      <header class="header-wrapper">
+        <h1>Hi <span id="name">Bestie</span>! Welcome to Our Website</h1>
+        <h4>Hope you enjoy your stay!</h4>
+        <button id="tombol">Ganti Nama</button>
+        <p id="error"></p>
+      </header>
+      <div class="auto-slide">
+        <img class="img-slideshow" src="assets/gambar1.jpg" />
+        <img class="img-slideshow" src="assets/gambar2.jpeg" />
+        <img class="img-slideshow" src="assets/gambar3.jpg" />
+      </div>
+    </div>
+    <hr />
+
+    <div id="our-profile">
+      <h1>Our Profile</h1>
+      <div id="our-profile-content">
+        <div id="banner">
+          <img src="assets/banner.png" alt="" />
+        </div>
+
+        <div id="tentang-sekolah">
+          <div class="profile-section">
+            <p class="profile-text">
+              Kampus adalah perguruan tinggi yang terdiri dari sejumlah fakultas
+              yang menyelenggarakan pendidikan akademik dan vokasi dalam
+              sejumlah ilmu pengetahuan, teknologi, atau seni. Dan jika memenuhi
+              syarat, dapat pula menyelenggarakan pendidikan profesi dan
+              spesialis.
+            </p>
+            <img src="assets/about-us.png" alt="" class="img-about-us" />
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="visi-misi-section" id="tentang-sekolah">
+            <h2>VISI</h2>
+            <p>
+              Sebagai pelopor perguruan tinggi nasional berkelas dunia yang
+              unggul dan inovatif, mengabdi kepada kepentingan bangsa dan
+              kemanusiaan dijiwai nilai-nilai budaya bangsa berdasarkan
+              Pancasila.
+            </p>
+          </div>
+
+          <div class="visi-misi-section" id="visi-misi">
+            <h2>MISI</h2>
+            <p>
+              Menjalankan pendidikan, penelitian, dan pengabdian kepada
+              masyarakat serta pelestarian dan pengembangan ilmu yang unggul dan
+              bermanfaat bagi masyarakat
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
 
     <div class="facilitations">
       <div>
-        <div class="circle" style="background-image: url('')"></div>
-        <h4>Football Arena</h4>
+        <div
+          class="circle"
+          style="background-image: url('assets/teacher.png')"
+        ></div>
+        <h4>Teacher</h4>
       </div>
       <div>
-        <div class="circle" style="background-image: url('')"></div>
-        <h4>Football Arena</h4>
+        <div
+          class="circle"
+          style="background-image: url('assets/sportfield.png')"
+        ></div>
+        <h4>Sport Field</h4>
       </div>
       <div>
-        <div class="circle" style="background-image: url('')"></div>
-        <h4>Football Arena</h4>
+        <div
+          class="circle"
+          style="background-image: url('assets/classroom.png')"
+        ></div>
+        <h4>Classroom</h4>
       </div>
     </div>
+    <hr />
+
+    <div id="message-us">
+      <div class="container">
+        <div class="form-container">
+          <h1>Message Us</h1>
+          <form onsubmit="return validateForm()" id="myForm">
+            <div>
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" />
+            </div>
+            <div>
+              <label for="tgl_lahir">Tanggal lahir</label>
+              <input type="date" id="tgl_lahir" name="tgl_lahir" />
+            </div>
+            <div>
+              <label for="jenis_kelamin">Jenis Kelamin:</label>
+              <div class="radio">
+                <input
+                  type="radio"
+                  id="laki"
+                  name="jenis_kelamin"
+                  value="laki-laki"
+                />
+              </div>
+              <label for="laki">Laki-Laki</label>
+              <div class="radio">
+                <input
+                  type="radio"
+                  id="perempuan"
+                  name="jenis_kelamin"
+                  value="perempuan"
+                />
+              </div>
+              <label for="perempuan">Perempuan</label>
+            </div>
+            <div>
+              <label for="pesan">Pesan</label>
+              <textarea id="pesan" name="pesan" cols="30" rows="5"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        <div class="card-box">
+          <p>Current Time :</p>
+          <p>Nama :</p>
+          <p>Tanggal Lahir :</p>
+          <p>Jenis Kelamin :</p>
+          <p>Pesan :</p>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <footer>
+      <p>Created By Gian 2023</p>
+    </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
